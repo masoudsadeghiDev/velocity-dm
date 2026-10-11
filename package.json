@@ -47,7 +47,7 @@
       "hardenedRuntime": false
     },
     "win": {
-      "icon": "assets/icon.png",
+      "icon": "assets/icon-tile.png",
       "target": [
         {
           "target": "nsis",
@@ -63,7 +63,7 @@
       "shortcutName": "Velocity DM"
     },
     "linux": {
-      "icon": "assets/icon.png",
+      "icon": "assets/icon-tile.png",
       "category": "Network",
       "target": [
         {

@@ -92,6 +92,9 @@ async function init() {
   bridge.on('batch', (req) => openLinksDialog(req));
   if (settings.get().browserIntegration) await bridge.start();
 
+  // Packaged builds get their Dock icon from the bundle; `npm start` would show Electron's.
+  if (isMac && !app.isPackaged) app.dock?.setIcon(appIcon());
+
   wireManager();
   wireSettings();
   registerIpc();
@@ -131,7 +134,8 @@ function webPrefs() {
 }
 
 function appIcon() {
-  const p = path.join(ASSETS, 'icon.png');
+  // macOS uses the padded grid icon; Windows/Linux taskbars look best with the full-bleed tile.
+  const p = path.join(ASSETS, isMac ? 'icon.png' : 'icon-tile.png');
   return fs.existsSync(p) ? nativeImage.createFromPath(p) : undefined;
 }
 
