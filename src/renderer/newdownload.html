@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:" />
+    <title>Download File Info</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body { overflow: auto; }
+      .wrap { display: flex; flex-direction: column; min-height: 100vh; }
+      .wrap .dlg-body { flex: 1; padding-top: 16px; }
+      .wrap .dlg-foot { border-radius: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap" id="root"></div>
+    <script src="common.js"></script>
+    <script src="newdownload.js"></script>
+  </body>
+</html>

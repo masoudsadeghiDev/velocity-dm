@@ -1,0 +1,5 @@
+node_modules/
+dist/
+*.vdm
+*.vdm.parts/
+.DS_Store

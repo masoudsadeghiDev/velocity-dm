@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:" />
+    <title>Velocity Download Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="toolbar" id="toolbar"></header>
+      <div class="body">
+        <nav class="sidebar" id="sidebar"></nav>
+        <div class="main-col">
+          <div class="banner hidden" id="banner"></div>
+          <main class="list-wrap" id="listWrap">
+            <table class="list">
+              <colgroup id="cols"></colgroup>
+              <thead><tr id="head"></tr></thead>
+              <tbody id="rows"></tbody>
+            </table>
+            <div class="empty hidden" id="empty"></div>
+          </main>
+        </div>
+      </div>
+      <footer class="statusbar" id="statusbar"></footer>
+    </div>
+    <script src="common.js"></script>
+    <script src="dialogs.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

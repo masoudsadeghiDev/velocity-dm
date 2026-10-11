@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Velocity Download Manager",
+  "version": "1.0.0",
+  "description": "Hands downloads, links and web videos to the Velocity Download Manager desktop app for faster, resumable downloading.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["downloads", "contextMenus", "cookies", "storage", "webRequest", "tabs", "scripting", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_title": "Velocity Download Manager",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "velocity-dm@velocity.local",
+      "strict_min_version": "121.0"
+    }
+  }
+}

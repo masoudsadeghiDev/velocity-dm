@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Velocity DM</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon32.png" alt="" width="22" height="22" />
+      <div class="title">Velocity DM</div>
+      <span id="status" class="status">…</span>
+    </header>
+
+    <label class="toggle">
+      <input type="checkbox" id="enabled" />
+      <span>Capture downloads from the browser</span>
+    </label>
+
+    <section>
+      <div class="sec-title">Media on this page</div>
+      <div id="media" class="media"></div>
+    </section>
+
+    <button id="allLinks" class="btn">Download all links on this page…</button>
+
+    <details>
+      <summary>Connection</summary>
+      <div class="row">
+        <span>App port</span>
+        <input type="number" id="port" min="1024" max="65535" />
+      </div>
+    </details>
+    <script src="popup.js"></script>
+  </body>
+</html>
