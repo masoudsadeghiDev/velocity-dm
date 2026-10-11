@@ -141,11 +141,11 @@
   const COLS = [
     { key: 'fileName', label: 'File Name' },
     { key: 'size', label: 'Size', width: 84 },
-    { key: 'status', label: 'Status', width: 172 },
-    { key: 'eta', label: 'Time Left', width: 96 },
+    { key: 'status', label: 'Status', width: 164 },
+    { key: 'eta', label: 'Time Left', width: 114 },
     { key: 'speed', label: 'Transfer Rate', width: 104 },
     { key: 'lastTry', label: 'Last Try', width: 124 },
-    { key: 'description', label: 'Description', width: 120 },
+    { key: 'description', label: 'Description', width: 110 },
   ];
   $('cols').replaceChildren(...COLS.map((c) => el('col', { style: c.width ? { width: `${c.width}px` } : {} })));
 
@@ -535,9 +535,9 @@
       el('span', { class: 'tb-spacer' }),
       el(
         'span',
-        { class: 'sb link', title: 'Browser extension setup', onclick: () => D.extensionHelp() },
+        { class: 'sb link', title: `Browser extension setup (app listens on 127.0.0.1:${s.bridgePort})`, onclick: () => D.extensionHelp() },
         el('span', { class: state.env.bridgeListening && s.browserIntegration ? 'dot-ok' : 'dot-off' }),
-        s.browserIntegration ? (state.env.bridgeListening ? `Browser integration on :${s.bridgePort}` : 'Browser integration unavailable') : 'Browser integration off'
+        s.browserIntegration ? (state.env.bridgeListening ? 'Browser integration on' : 'Browser integration unavailable') : 'Browser integration off'
       ),
       el('span', { class: 'sb', title: state.env.ffmpeg ? 'ffmpeg found: HLS videos are saved as MP4' : 'Install ffmpeg to save HLS videos as MP4' }, icon('video'), state.env.ffmpeg ? 'ffmpeg ready' : 'no ffmpeg')
     );
