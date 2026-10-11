@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Velocity Download Manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hands downloads, links and web videos to the Velocity Download Manager desktop app for faster, resumable downloading.",
   "icons": {
     "16": "icons/icon16.png",
