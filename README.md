@@ -11,6 +11,13 @@
 
 A desktop download manager in the spirit of Internet Download Manager (IDM), for macOS, Windows and Linux (Electron).
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshot-dark.png">
+    <img src="docs/screenshot-light.png" alt="Velocity DM main window with several downloads in progress, and the progress window for one download showing its 8 parallel connections" width="100%">
+  </picture>
+</p>
+
 ## Features
 
 | IDM feature | Velocity DM |
