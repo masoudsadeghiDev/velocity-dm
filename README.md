@@ -1,4 +1,13 @@
-# Velocity Download Manager
+<p align="center">
+  <img src="docs/banner.png" alt="Velocity DM: fast, multi-connection download manager for macOS, Windows and Linux" width="100%">
+</p>
+
+<p align="center">
+  <a href="../../releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/masoudsadeghiDev/velocity-dm?style=flat-square&color=8b5cf6"></a>
+  <img alt="Platforms: macOS, Windows, Linux" src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-22d3ee?style=flat-square">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/github/license/masoudsadeghiDev/velocity-dm?style=flat-square&color=5ea1f8"></a>
+  <a href="../../releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/masoudsadeghiDev/velocity-dm/total?style=flat-square&color=34d399"></a>
+</p>
 
 A desktop download manager in the spirit of Internet Download Manager (IDM), for macOS, Windows and Linux (Electron).
 
@@ -108,6 +117,7 @@ src/main/
   main.js / preload.js    Electron windows, tray, menus, IPC, notifications, clipboard
 src/renderer/             main window, progress window, Download File Info window
 extension/                MV3 browser extension (capture, context menus, video grabber)
+scripts/                  make-icons.js (all app/tray/extension icons), make-banner.js (docs/banner.png)
 ```
 
 **Security.** Renderers run sandboxed with context isolation and no Node access, behind a strict CSP, and cannot navigate away. The browser bridge listens only on 127.0.0.1. It rejects foreign `Host` headers (DNS rebinding), accepts only browser-extension origins, and requires a JSON content type. Because of this, ordinary web pages can't push downloads into the app. Cookies and credentials are dropped on cross-origin redirects. Deleting a finished file moves it to the Trash.
